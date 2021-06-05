@@ -23,7 +23,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
                 .Where(isTriggered => isTriggered)
                 .Subscribe(_ => 
                     compRigidbody.AddForce(Vector3.up * jumpPower, forceMode))
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
         }
 
     }

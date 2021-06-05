@@ -38,7 +38,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
                         isTriggered ? scaleYOnSlide : scaleYNormal,
                         collider.size.z);
                 })
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
         }
 
     }

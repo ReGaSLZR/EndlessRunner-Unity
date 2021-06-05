@@ -65,6 +65,8 @@
     <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Holder\AnimationsHolder.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\StringUtil.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\GameStatus.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\PlayerModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -58,19 +58,19 @@
 
             GetDisposableCollision(
                 this.OnCollisionEnterAsObservable(), true)
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
 
             GetDisposableCollision(
                 this.OnCollisionExitAsObservable(), false)
-              .AddTo(disposables);
+              .AddTo(disposablesBasic);
 
             GetDisposableTrigger(
                 this.OnTriggerEnterAsObservable(), true)
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
 
             GetDisposableTrigger(
                 this.OnTriggerExitAsObservable(), false)
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
         }
 
         private IDisposable GetDisposableCollision(

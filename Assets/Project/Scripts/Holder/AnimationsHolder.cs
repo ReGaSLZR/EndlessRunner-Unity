@@ -2,7 +2,6 @@ namespace ReGaSLZR.EndlessRunner.Holder
 {
 
     using NaughtyAttributes;
-    using System.Collections;
     using UnityEngine;
 
     public class AnimationsHolder : MonoBehaviour

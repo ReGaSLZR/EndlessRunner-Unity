@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 300090638}
   - component: {fileID: 300090637}
   m_Layer: 0
-  m_Name: Slide Detector
+  m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1922664443}
   - component: {fileID: 1922664442}
   m_Layer: 0
-  m_Name: Jump Detector
+  m_Name: Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 2080310063}
   - component: {fileID: 2080310062}
   m_Layer: 0
-  m_Name: Death Detector
+  m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,8 +434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compAnimator: {fileID: 1608239800}
+  paramOnDeathTrigger: TriggerOnDeath
   paramSlide: isSliding
-  slideDuration: 2
 --- !u!95 &1608239800
 Animator:
   serializedVersion: 3
@@ -660,7 +660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dba41f594107f4e82af6f936ab66e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   compRigidbody: {fileID: 1207254168854874478}
+  signalDetector: {fileID: 2080310062}
+  animHolder: {fileID: 5714448534609041426}
   moveDirection: {x: 1, y: 0, z: 0}
   accelForward: 3
 --- !u!114 &2260783824210646875
@@ -675,8 +678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31f88fd4363727418013c02fba65f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   compRigidbody: {fileID: 1207254168854874478}
-  jumpSignalDetector: {fileID: 1922664442}
+  signalDetector: {fileID: 1922664442}
   jumpPower: 7
   forceMode: 1
 --- !u!114 &4887868321631123525
@@ -691,8 +695,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d71648e33cc52014aa4839f5ad6fe305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   compRigidbody: {fileID: 1207254168854874478}
-  slideSignalDetector: {fileID: 300090637}
+  signalDetector: {fileID: 300090637}
   animHolder: {fileID: 5714448534609041426}
   collider: {fileID: 1207254168854874479}
   scaleYNormal: 1

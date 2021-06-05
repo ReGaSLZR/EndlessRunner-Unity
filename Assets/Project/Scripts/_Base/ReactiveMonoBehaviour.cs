@@ -9,7 +9,10 @@ namespace ReGaSLZR.EndlessRunner.Base
 
         #region Protected Variables
 
-        protected CompositeDisposable disposables
+        protected CompositeDisposable disposablesBasic
+            = new CompositeDisposable();
+
+        protected CompositeDisposable disposablesTerminal
             = new CompositeDisposable();
 
         #endregion
@@ -23,7 +26,12 @@ namespace ReGaSLZR.EndlessRunner.Base
 
         protected virtual void OnDisable()
         {
-            disposables.Clear();
+            disposablesBasic.Clear();
+        }
+
+        protected virtual void OnDestroy()
+        {
+            disposablesTerminal.Clear();
         }
 
         #endregion

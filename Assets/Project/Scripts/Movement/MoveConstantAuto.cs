@@ -1,12 +1,14 @@
 namespace ReGaSLZR.EndlessRunner.Movement
 {
-    
+
+    using Model;
     using Holder;
 
     using NaughtyAttributes;
     using UnityEngine;
     using UniRx;
     using UniRx.Triggers;
+    using Zenject;
 
     /// <summary>
     /// Handles the constant movement as well as the termination
@@ -14,6 +16,9 @@ namespace ReGaSLZR.EndlessRunner.Movement
     /// </summary>
     public class MoveConstantAuto : BaseMovement
     {
+
+        [Inject]
+        private PlayerStatsSetter playerStats;
 
         #region Inspector Variables
 
@@ -37,15 +42,20 @@ namespace ReGaSLZR.EndlessRunner.Movement
               .Subscribe(_ => compRigidbody.position +=
                   (moveDirection * accelForward *
                   Time.fixedDeltaTime))
-              .AddTo(disposables);
+              .AddTo(disposablesBasic);
 
             signalDetector.IsTriggered
                 .Where(isDead => isDead)
                 .Subscribe(_ => {
                     animHolder.Die();
-                    this.enabled = false;
+                    compRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
+                    if (isPlayer)
+                    {
+                        playerStats.SetGameStatus(GameStatus.GameOver);
+                    }
                 })
-                .AddTo(disposables);
+                .AddTo(disposablesBasic);
         }
 
         #endregion
