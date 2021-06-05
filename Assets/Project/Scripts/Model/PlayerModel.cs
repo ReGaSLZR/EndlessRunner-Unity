@@ -29,7 +29,7 @@ namespace ReGaSLZR.EndlessRunner.Model
         #region Private Variables
 
         private ReactiveProperty<GameStatus> gameStatus
-            = new ReactiveProperty<GameStatus>(GameStatus.NotStarted);
+            = new ReactiveProperty<GameStatus>(GameStatus.InPlay);
 
         private ReactiveProperty<int> time
             = new ReactiveProperty<int>(0);
@@ -51,17 +51,17 @@ namespace ReGaSLZR.EndlessRunner.Model
 
         #region Class Implementation
 
-        [Button]
-        private void StartGame()
-        {
-            SetGameStatus(GameStatus.InPlay);
-        }
+        //[Button]
+        //private void StartGame()
+        //{
+        //    SetGameStatus(GameStatus.InPlay);
+        //}
 
-        [Button]
-        private void EndGame()
-        {
-            SetGameStatus(GameStatus.GameOver);
-        }
+        //[Button]
+        //private void EndGame()
+        //{
+        //    SetGameStatus(GameStatus.GameOver);
+        //}
 
         #endregion
 

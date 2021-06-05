@@ -3,7 +3,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
     using Base;
     using Model;
-    using Trigger;
+    using Detector;
 
     using NaughtyAttributes;
     using UnityEngine;
@@ -29,7 +29,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
         [SerializeField]
         [Required]
-        protected Detector signalDetector;
+        protected CollisionDetector signalDetector;
 
         #endregion
 

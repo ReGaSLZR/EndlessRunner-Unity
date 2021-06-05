@@ -1,4 +1,4 @@
-﻿namespace ReGaSLZR.EndlessRunner.Trigger
+﻿namespace ReGaSLZR.EndlessRunner.Detector
 {
 
     using Base;
@@ -16,7 +16,7 @@
     /// for the change in value.
     /// </summary>
     [RequireComponent(typeof(Collider))]
-    public class Detector : ReactiveMonoBehaviour
+    public class CollisionDetector : ReactiveMonoBehaviour
     {
 
         #region Inspector Variables

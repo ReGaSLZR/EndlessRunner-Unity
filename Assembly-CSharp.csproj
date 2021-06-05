@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Project\Scripts\Movement\MoveConstantAuto.cs" />
-    <Compile Include="Assets\Project\Scripts\Trigger\Detector.cs" />
+    <Compile Include="Assets\Project\Scripts\Detector\CollisionDetector.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\BaseMovement.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveJumpAuto.cs" />
     <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
@@ -67,6 +67,11 @@
     <Compile Include="Assets\Project\Scripts\Utils\StringUtil.cs" />
     <Compile Include="Assets\Project\Scripts\Model\GameStatus.cs" />
     <Compile Include="Assets\Project\Scripts\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Detector\ClickDetector.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\BreakSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\BaseSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\MouseButtonOption.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\SpawnSkill.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
