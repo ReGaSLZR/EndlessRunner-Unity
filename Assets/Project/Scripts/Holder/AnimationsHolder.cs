@@ -5,7 +5,7 @@ namespace ReGaSLZR.EndlessRunner.Holder
     using System.Collections;
     using UnityEngine;
 
-    public class PlayerAnimationsHolder : MonoBehaviour
+    public class AnimationsHolder : MonoBehaviour
     {
 
         #region Inspector Variables
@@ -27,17 +27,9 @@ namespace ReGaSLZR.EndlessRunner.Holder
 
         #endregion
 
-        public void Slide()
+        public void Slide(bool isSliding)
         {
-            StopAllCoroutines();
-            StartCoroutine(CorSlide());
-        }
-
-        private IEnumerator CorSlide()
-        {
-            compAnimator.SetBool(paramSlide, true);
-            yield return new WaitForSeconds(slideDuration);
-            compAnimator.SetBool(paramSlide, false);
+            compAnimator.SetBool(paramSlide, isSliding);
         }
 
     }

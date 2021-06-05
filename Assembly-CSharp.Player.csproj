@@ -63,7 +63,7 @@
     <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\LogUtil.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
-    <Compile Include="Assets\Project\Scripts\Holder\PlayerAnimationsHolder.cs" />
+    <Compile Include="Assets\Project\Scripts\Holder\AnimationsHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
