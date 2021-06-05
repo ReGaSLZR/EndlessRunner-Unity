@@ -5,7 +5,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
     using UniRx;
     using UniRx.Triggers;
 
-    public class PlayerMovementConstant : BaseMovement
+    public class MoveConstantAuto : BaseMovement
     {
 
         #region Inspector Variables

@@ -56,12 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Project\Scripts\Movement\PlayerMovementConstant.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveConstantAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Trigger\Detector.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\BaseMovement.cs" />
-    <Compile Include="Assets\Project\Scripts\Movement\PlayerMovementJump.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveJumpAuto.cs" />
     <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\LogUtil.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
+    <Compile Include="Assets\Project\Scripts\Holder\PlayerAnimationsHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

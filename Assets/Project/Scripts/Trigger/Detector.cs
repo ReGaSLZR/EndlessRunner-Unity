@@ -6,17 +6,9 @@
 
     using NaughtyAttributes;
     using System;
-    using System.Collections;
     using UnityEngine;
     using UniRx;
     using UniRx.Triggers;
-
-    public enum SingleTriggerType
-    { 
-        Enter,
-        Stay,
-        Exit,
-    }
 
     /// <summary>
     /// Uses a collider's OnCollisionX and OnTriggerX to detect
@@ -30,21 +22,8 @@
         #region Inspector Variables
 
         [SerializeField]
-        private SingleTriggerType triggerType;
-
-        [SerializeField]
         [Tag]
         protected string tagTarget;
-
-        [SerializeField]
-        private bool isSingleUse = false;
-
-        [SerializeField]
-        private bool doesSelfReset = false;
-
-        [SerializeField]
-        [ShowIf("doesSelfReset")]
-        private float selfResetDelay = 2.5f;
 
         #endregion
 
@@ -52,8 +31,6 @@
 
         private ReactiveProperty<bool> isTriggered
             = new ReactiveProperty<bool>(false);
-
-        private GameObject cachedDetectedTarget;
 
         #endregion
 
@@ -67,14 +44,6 @@
             }
         }
 
-        public GameObject DetectedTarget
-        { 
-            get 
-            {
-                return cachedDetectedTarget;
-            } 
-        }
-
         #endregion
 
         protected override void RegisterObservables()
@@ -82,88 +51,46 @@
 
             if (string.IsNullOrEmpty(tag))
             {
-                LogUtil.PrintWarning(this, GetType(), 
+                LogUtil.PrintWarning(this, GetType(),
                     "No tag specified. Skipping RegisterObservables() call...");
                 return;
             }
 
-            GetCollisionObservable()
-              .Where(collision => collision.gameObject.CompareTag(tagTarget))
-              .Subscribe(collision => ExecuteAndCheckUse(collision.gameObject))
-              .AddTo(disposables);
-
-            GetTriggerObservable()
-                .Where(collider => collider.CompareTag(tagTarget))
-                .Subscribe(collider => ExecuteAndCheckUse(collider.gameObject))
+            GetDisposableCollision(
+                this.OnCollisionEnterAsObservable(), true)
                 .AddTo(disposables);
 
-            if (doesSelfReset)
-            {
-                isTriggered.Where(val => val)
-                    .Subscribe(_ => {
-                            StopAllCoroutines();
-                            StartCoroutine(CorResetTrigger());
-                        })
-                    .AddTo(disposables);
-            }
+            GetDisposableCollision(
+                this.OnCollisionExitAsObservable(), false)
+              .AddTo(disposables);
+
+            GetDisposableTrigger(
+                this.OnTriggerEnterAsObservable(), true)
+                .AddTo(disposables);
+
+            GetDisposableTrigger(
+                this.OnTriggerExitAsObservable(), false)
+                .AddTo(disposables);
         }
 
-        private IEnumerator CorResetTrigger()
+        private IDisposable GetDisposableCollision(
+            IObservable<Collision> observable, bool isTriggered)
         {
-            yield return new WaitForSeconds(selfResetDelay);
-            isTriggered.Value = false;
+            return observable
+                .Where(collision => collision.gameObject.CompareTag(tagTarget))
+                .Subscribe(collision =>
+                    this.isTriggered.Value = isTriggered);
         }
 
-        private void ExecuteAndCheckUse(GameObject target)
+        private IDisposable GetDisposableTrigger(
+            IObservable<Collider> observable, bool isTriggered)
         {
-            isTriggered.Value = true;
-            cachedDetectedTarget = target;
-
-            if (isSingleUse)
-            {
-                gameObject.SetActive(false);
-            }
+            return observable
+                .Where(collider => collider.CompareTag(tagTarget))
+                .Subscribe(collision =>
+                    this.isTriggered.Value = isTriggered);
         }
 
-        private IObservable<Collider> GetTriggerObservable()
-        {
-            switch (triggerType)
-            {
-                case SingleTriggerType.Enter:
-                    {
-                        return this.OnTriggerEnterAsObservable();
-                    }
-                case SingleTriggerType.Stay:
-                    {
-                        return this.OnTriggerStayAsObservable();
-                    }
-                case SingleTriggerType.Exit:
-                default:
-                    {
-                        return this.OnTriggerExitAsObservable();
-                    }
-            }
-        }
-
-        private IObservable<Collision> GetCollisionObservable()
-        {
-            switch (triggerType)
-            {
-                case SingleTriggerType.Enter:
-                    {
-                        return this.OnCollisionEnterAsObservable();
-                    }
-                case SingleTriggerType.Stay:
-                    {
-                        return this.OnCollisionStayAsObservable();
-                    }
-                case SingleTriggerType.Exit:
-                default:
-                    {
-                        return this.OnCollisionExitAsObservable();
-                    }
-            }
-        }
 
     }
 

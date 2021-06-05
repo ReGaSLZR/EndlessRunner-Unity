@@ -7,7 +7,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
     using UnityEngine;
     using UniRx;
 
-    public class PlayerMovementJump : BaseMovement
+    public class MoveJumpAuto : BaseMovement
     {
 
         #region Inspector Variables
