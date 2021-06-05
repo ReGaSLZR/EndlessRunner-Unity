@@ -2,6 +2,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 {
 
     using Base;
+    using Trigger;
 
     using NaughtyAttributes;
     using UnityEngine;
@@ -15,6 +16,10 @@ namespace ReGaSLZR.EndlessRunner.Movement
         [SerializeField]
         [Required]
         protected Rigidbody compRigidbody;
+
+        [SerializeField]
+        [Required]
+        protected Detector signalDetector;
 
         #endregion
 

@@ -1,9 +1,6 @@
 namespace ReGaSLZR.EndlessRunner.Movement
 {
 
-    using Trigger;
-    
-    using NaughtyAttributes;
     using UnityEngine;
     using UniRx;
 
@@ -11,10 +8,6 @@ namespace ReGaSLZR.EndlessRunner.Movement
     {
 
         #region Inspector Variables
-
-        [SerializeField]
-        [Required]
-        private Detector jumpSignalDetector;
 
         [SerializeField]
         private float jumpPower;
@@ -26,7 +19,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
         protected override void RegisterObservables()
         {
-            jumpSignalDetector.IsTriggered
+            signalDetector.IsTriggered
                 .Where(isTriggered => isTriggered)
                 .Subscribe(_ => 
                     compRigidbody.AddForce(Vector3.up * jumpPower, forceMode))

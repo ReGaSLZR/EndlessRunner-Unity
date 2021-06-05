@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Jumpable
   - Slideable
+  - Floor
+  - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX

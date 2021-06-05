@@ -14,22 +14,24 @@ namespace ReGaSLZR.EndlessRunner.Holder
         [Required]
         private Animator compAnimator;
 
-        //[SerializeField]
-        //[AnimatorParam("compAnimator")]
-        //private string paramJump;
+        [SerializeField]
+        [AnimatorParam("compAnimator")]
+        private string paramOnDeathTrigger;
 
         [SerializeField]
         [AnimatorParam("compAnimator")]
         private string paramSlide;
-
-        [SerializeField]
-        private float slideDuration = 2f;
 
         #endregion
 
         public void Slide(bool isSliding)
         {
             compAnimator.SetBool(paramSlide, isSliding);
+        }
+
+        public void Die()
+        {
+            compAnimator.SetTrigger(paramOnDeathTrigger);
         }
 
     }

@@ -23,7 +23,7 @@
 
         [SerializeField]
         [Tag]
-        protected string tagTarget;
+        protected string[] tagTargets;
 
         #endregion
 
@@ -49,7 +49,7 @@
         protected override void RegisterObservables()
         {
 
-            if (string.IsNullOrEmpty(tag))
+            if (tagTargets == null || tagTargets.Length == 0)
             {
                 LogUtil.PrintWarning(this, GetType(),
                     "No tag specified. Skipping RegisterObservables() call...");
@@ -77,7 +77,7 @@
             IObservable<Collision> observable, bool isTriggered)
         {
             return observable
-                .Where(collision => collision.gameObject.CompareTag(tagTarget))
+                .Where(collision => StringUtil.HasEntry(tagTargets, collision.gameObject.tag))
                 .Subscribe(collision =>
                     this.isTriggered.Value = isTriggered);
         }
@@ -86,7 +86,7 @@
             IObservable<Collider> observable, bool isTriggered)
         {
             return observable
-                .Where(collider => collider.CompareTag(tagTarget))
+                .Where(collider => StringUtil.HasEntry(tagTargets, collider.tag))
                 .Subscribe(collision =>
                     this.isTriggered.Value = isTriggered);
         }

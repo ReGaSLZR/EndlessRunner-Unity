@@ -2,7 +2,6 @@ namespace ReGaSLZR.EndlessRunner.Movement
 {
 
     using Holder;
-    using Trigger;
 
     using NaughtyAttributes;
     using UniRx;
@@ -12,10 +11,6 @@ namespace ReGaSLZR.EndlessRunner.Movement
     {
 
         #region Inspector Variables
-
-        [SerializeField]
-        [Required]
-        private Detector slideSignalDetector;
 
         [SerializeField]
         [Required]
@@ -35,7 +30,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
         protected override void RegisterObservables()
         {
-            slideSignalDetector.IsTriggered
+            signalDetector.IsTriggered
                 .Subscribe(isTriggered => {
                     animHolder.Slide(isTriggered);
                     collider.size = new Vector3(
