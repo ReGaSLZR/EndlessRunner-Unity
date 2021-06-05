@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5978279797121643486}
   - component: {fileID: 5978279797121643481}
   - component: {fileID: 5978279797121643485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform Slideable (TEST)
   m_TagString: Slideable
   m_Icon: {fileID: 0}

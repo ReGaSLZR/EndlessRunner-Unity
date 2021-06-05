@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 814713194170383624}
   - component: {fileID: 814713194170383631}
   - component: {fileID: 814713194170383627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform Jumpable (TEST)
   m_TagString: Jumpable
   m_Icon: {fileID: 0}
