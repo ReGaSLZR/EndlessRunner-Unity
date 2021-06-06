@@ -29,6 +29,14 @@ namespace ReGaSLZR.EndlessRunner.Model
 
     #endregion
 
+    /// <summary>
+    /// This model that holds together the reactive gameplay attributes 
+    /// and methods monitored and shared between classes.
+    /// Contrary to a Singleton, this implements the 
+    /// concept of Dependency Inversion by uploading its
+    /// separate interfaces for abstraction and encapsulation purposes.
+    /// Also, this makes the project ready for Unit Testing.
+    /// </summary>
     public class GameplayModel : MonoInstaller,
         PlayerStatsGetter, PlayerStatsSetter
     {

@@ -4,6 +4,11 @@ namespace ReGaSLZR.EndlessRunner.Holder
     using NaughtyAttributes;
     using UnityEngine;
 
+    /// <summary>
+    /// Serves as the go-to component for
+    /// animation executions as it holds the reference
+    /// to the Animator and the Parameters.
+    /// </summary>
     public class AnimationsHolder : MonoBehaviour
     {
 

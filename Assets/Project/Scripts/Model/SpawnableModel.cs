@@ -20,6 +20,12 @@ namespace ReGaSLZR.EndlessRunner.Model
         public void SetSelectedPool(SpawnablePoolGetter pool);
     }
 
+    /// <summary>
+    /// Like GameplayModel, this holds together the reactive attributes 
+    /// and methods monitored and shared between classes, specific
+    /// for the Spawnable Items for UI and for any skill that spawns
+    /// such items (e.g. ClickSpawnSkill.cs).
+    /// </summary>
     public class SpawnableModel : MonoInstaller, 
         SpawnableGetter, SpawnableSetter
     {

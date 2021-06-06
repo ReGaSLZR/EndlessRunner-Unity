@@ -9,6 +9,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using UniRx;
     using Zenject;
 
+    /// <summary>
+    /// Handles the hiding and showing of specific
+    /// UI Canvas Groups depending on the game status.
+    /// </summary>
     public class UIGroupsController : ReactiveMonoBehaviour
     {
 
@@ -33,6 +37,8 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
         protected override void RegisterObservables()
         {
+            //Execute logic every time there's a change
+            //in the GameStatus value.
             playerStats.GetGameStatus()
                 .Subscribe(status => ChangeActiveGroup(status))
                 .AddTo(disposablesBasic);

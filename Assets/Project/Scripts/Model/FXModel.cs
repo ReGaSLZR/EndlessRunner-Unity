@@ -6,9 +6,11 @@ namespace ReGaSLZR.EndlessRunner.Model
     using Zenject;
 
     /// <summary>
-    /// Holds the reference to globally needed FXs.
+    /// Holds the references to globally needed FXs.
     /// Good for repositioning elements regardless of 
-    /// parent/caller object's own position.
+    /// parent/caller object's own position. Uploads
+    /// itself to the Dependency Injection framework
+    /// for indirect and passive dependency handling.
     /// </summary>
     [System.Serializable]
     public class FXModel : MonoInstaller

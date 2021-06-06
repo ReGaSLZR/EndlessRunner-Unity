@@ -4,6 +4,12 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
     using UnityEngine;
     using Zenject;
 
+    /// <summary>
+    /// Holds together all the Settings and takes care of
+    /// uploading these settings as separate entries 
+    /// (for abstraction and encapsulation purposes) to
+    /// the Dependency Injection framework.
+    /// </summary>
     [CreateAssetMenu(fileName = "GameSettings", 
         menuName = "Installers/GameSettings")]
     public class GameSettings : ScriptableObjectInstaller<GameSettings>

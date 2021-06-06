@@ -12,6 +12,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using TMPro;
     using Zenject;
 
+    /// <summary>
+    /// Controls the value of texts in the UI.
+    /// Reflects the values from Player Stats and Key Settings.
+    /// </summary>
     public class UITextsController : ReactiveMonoBehaviour
     {
         [Inject]
@@ -82,7 +86,8 @@ namespace ReGaSLZR.EndlessRunner.Controller
             SetTextOnUI(textReload, "Reload (" +
                 keySettings.Reload.ToString() + ")");
             SetTextOnUI(textQuit, "Quit (" +
-                keySettings.Quit.ToString() + ")"); //TODO make strings static or predefine them somewhere else
+                keySettings.Quit.ToString() + ")"); 
+            //TODO make strings static or predefine them somewhere else
         }
 
         private void SetTextOnUI(TextMeshProUGUI[] texts, string content)

@@ -19,6 +19,12 @@ namespace ReGaSLZR.EndlessRunner.Holder
         public GameObject GetItemFromPool();
     }
 
+    /// <summary>
+    /// A special variation of the ObjectPool. This class
+    /// not only holds Spawnable items together for future use, but also
+    /// notifies the Spawnable Model for when it is actively 
+    /// selected by the Player through a given hotkey.
+    /// </summary>
     public class SpawnablePool : ObjectPool, SpawnablePoolGetter
     {
 

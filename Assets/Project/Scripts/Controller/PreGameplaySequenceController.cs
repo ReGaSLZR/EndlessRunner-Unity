@@ -17,7 +17,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
     /// [1] Cutscene
     /// [2] Countdown to availability of Destructive Power (Skill)
     /// </summary>
-    public class GameplaySequenceController : ReactiveMonoBehaviour
+    public class PreGameplaySequenceController : ReactiveMonoBehaviour
     {
 
         [Inject]
@@ -46,16 +46,19 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
         protected override void RegisterObservables()
         {
+            //Upon entering gameplay, force-set the Destroy Skill usage to 0
+            //and do a countdown before refilling it to max.
             playerStatsGetter.GetGameStatus()
                 .Where(status => status == GameStatus.InPlay)
                 .Where(_ => playerStatsGetter.GetPlayerTime().Value == 0)
                 .Subscribe(_ => StartCoroutine(
-                    CorStartCountdownToBreakSkillUsage()))
+                    CorStartCountdownToDestroySkillUsage()))
                 .AddTo(disposablesBasic);
         }
 
         private void Start()
         {
+            //Immediately enter cutscene.
             StartCoroutine(CorPlayCutscenePreGameplay());
         }
 
@@ -66,7 +69,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
             playerStatsSetter.SetGameStatus(GameStatus.InPlay);
         }
 
-        private IEnumerator CorStartCountdownToBreakSkillUsage()
+        private IEnumerator CorStartCountdownToDestroySkillUsage()
         {
             playerStatsSetter.SetDestructionPowerUseCount(0);
 

@@ -5,6 +5,9 @@ namespace ReGaSLZR.EndlessRunner.Holder
 
     using UnityEngine;
 
+    /// <summary>
+    /// Pretty straightforward. :)
+    /// </summary>
     public class ObjectPool : ReactiveMonoBehaviour
     {
 

@@ -12,8 +12,8 @@
 
     /// <summary>
     /// Uses a collider's OnCollisionX and OnTriggerX to detect
-    /// interaction with a specified tag. Notifies any subscriber
-    /// for the change in value.
+    /// interaction with specified tags. Notifies any subscriber
+    /// for the change in value. Caches the collided object.
     /// </summary>
     [RequireComponent(typeof(Collider))]
     public class CollisionDetector : ReactiveMonoBehaviour

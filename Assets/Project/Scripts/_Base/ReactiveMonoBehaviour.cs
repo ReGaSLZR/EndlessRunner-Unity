@@ -4,6 +4,10 @@ namespace ReGaSLZR.EndlessRunner.Base
     using UnityEngine;
     using UniRx;
 
+    /// <summary>
+    /// My base MonoBehaviour class that I use for
+    /// reactive components. - Ren
+    /// </summary>
     public abstract class ReactiveMonoBehaviour : MonoBehaviour
     {
 

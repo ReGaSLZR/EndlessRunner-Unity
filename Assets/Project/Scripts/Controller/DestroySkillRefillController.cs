@@ -7,6 +7,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using UniRx;
     using Zenject;
 
+    /// <summary>
+    /// Controls when the Player's Destruction Power is refilled
+    /// bit by bit during gameplay.
+    /// </summary>
     public class DestroySkillRefillController : ReactiveMonoBehaviour
     {
 
@@ -23,6 +27,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
         protected override void RegisterObservables()
         {
+            //Set future refill time when the current Destruction Power is below Max
             Observable.Interval(System.TimeSpan.FromSeconds(1))
                 .Where(_ => playerStatsGetter.GetGameStatus().Value
                     == GameStatus.InPlay)
@@ -35,6 +40,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
                     playerStatsGetter.GetPlayerTime().Value)
                 .AddTo(disposablesBasic);
 
+            //Add a Destruction Power usage when the future refill time is met.
             playerStatsGetter.GetPlayerTime()
                 .Where(time => time == refillTime)
                 .Where(_ => playerStatsGetter.GetDestructionPowerUseCount().Value

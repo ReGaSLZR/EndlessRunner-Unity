@@ -11,6 +11,13 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using UniRx;
     using Zenject;
 
+    /// <summary>
+    /// Handles the randomization of the terrain during gameplay.
+    /// Spawning happens in a given time span.
+    /// Uses ObjectPools for optimized spawning operation.
+    /// TIP: This controller only manipulates the x position of 
+    /// items from the pools.
+    /// </summary>
     public class RandomTerrainController : ReactiveMonoBehaviour
     {
 
@@ -32,7 +39,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
         {
             latestPositionX = terrainSettings.StartingPositionX;
 
-            Observable.Interval(TimeSpan.FromSeconds(terrainSettings.SpawnTimeSpan))
+            //After a given delay, spawn an item from a random ObjectPool
+            //at every time span tick.
+            Observable.Interval(
+                    TimeSpan.FromSeconds(terrainSettings.SpawnTimeSpan))
                 .Delay(TimeSpan.FromSeconds(
                     terrainSettings.DelayFirstSpawn))
                 .Where(_ => playerStats.GetGameStatus().Value

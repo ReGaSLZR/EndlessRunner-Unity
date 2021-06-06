@@ -11,6 +11,9 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using UniRx.Triggers;
     using Zenject;
 
+    /// <summary>
+    /// Controls gameplay terminal operations (Pause/Unpause, Reload, Quit)
+    /// </summary>
     public class GameplayController : ReactiveMonoBehaviour
     {
 
@@ -25,6 +28,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
         protected override void RegisterObservables()
         {
+            //On Pause/UnPause
             this.UpdateAsObservable()
                 .Where(_ => Input.GetKeyDown(keySettings.PauseUnpause))
                 .Select(_ => playerStatsGetter.GetGameStatus().Value)
@@ -33,6 +37,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
                 .Subscribe(status => PauseUnpauseGame(status))
                 .AddTo(disposablesBasic);
 
+            //On Reload
             this.UpdateAsObservable()
               .Where(_ => Input.GetKeyDown(keySettings.Reload))
               .Subscribe(_ => {
@@ -41,6 +46,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
               })
               .AddTo(disposablesBasic);
 
+            //On Quit
             this.UpdateAsObservable()
               .Where(_ => Input.GetKeyDown(keySettings.Quit))
               .Subscribe(_ => {
