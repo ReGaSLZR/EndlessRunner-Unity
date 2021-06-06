@@ -66,7 +66,7 @@
     <Compile Include="Assets\Project\Scripts\Model\GameStatus.cs" />
     <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\KeySettings.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\BreakSkillRefillController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\DestroySkillRefillController.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\MouseClickBased\ClickDestroySkill.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveGravityMultiplier.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\MouseClickBased\ClickSpawnSkill.cs" />

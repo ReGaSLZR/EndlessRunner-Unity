@@ -7,7 +7,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using UniRx;
     using Zenject;
 
-    public class BreakSkillRefillController : ReactiveMonoBehaviour
+    public class DestroySkillRefillController : ReactiveMonoBehaviour
     {
 
         [Inject]
