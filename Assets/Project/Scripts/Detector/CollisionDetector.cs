@@ -32,6 +32,8 @@
         private ReactiveProperty<bool> isTriggered
             = new ReactiveProperty<bool>(false);
 
+        private GameObject cachedTarget;
+
         #endregion
 
         #region Public Variables
@@ -41,6 +43,14 @@
             get
             {
                 return isTriggered;
+            }
+        }
+
+        public GameObject CachedTarget
+        {
+            get 
+            {
+                return cachedTarget;
             }
         }
 
@@ -78,8 +88,10 @@
         {
             return observable
                 .Where(collision => StringUtil.HasEntry(tagTargets, collision.gameObject.tag))
-                .Subscribe(collision =>
-                    this.isTriggered.Value = isTriggered);
+                .Subscribe(collision => {
+                    cachedTarget = isTriggered ? collision.gameObject : null;
+                    this.isTriggered.Value = isTriggered;
+                });
         }
 
         private IDisposable GetDisposableTrigger(
@@ -87,8 +99,10 @@
         {
             return observable
                 .Where(collider => StringUtil.HasEntry(tagTargets, collider.tag))
-                .Subscribe(collision =>
-                    this.isTriggered.Value = isTriggered);
+                .Subscribe(collider => {
+                    cachedTarget = isTriggered ? collider.gameObject : null;
+                    this.isTriggered.Value = isTriggered;
+                });
         }
 
 

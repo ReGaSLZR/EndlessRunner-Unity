@@ -18,7 +18,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
     {
 
         [Inject]
-        private PlayerStatsSetter playerStats;
+        private PlayerStatsSetter playerStatsSetter;
 
         #region Inspector Variables
 
@@ -29,9 +29,6 @@ namespace ReGaSLZR.EndlessRunner.Movement
         [SerializeField]
         private Vector3 moveDirection;
 
-        [SerializeField]
-        private float accelForward;
-
         #endregion
 
         #region Class Implementation
@@ -40,22 +37,32 @@ namespace ReGaSLZR.EndlessRunner.Movement
         {
             this.FixedUpdateAsObservable()
               .Subscribe(_ => compRigidbody.position +=
-                  (moveDirection * accelForward *
+                  (moveDirection * playerSettings.ConstantAccel *
                   Time.fixedDeltaTime))
               .AddTo(disposablesBasic);
 
             signalDetector.IsTriggered
                 .Where(isDead => isDead)
-                .Subscribe(_ => {
-                    animHolder.Die();
-                    compRigidbody.constraints = RigidbodyConstraints.FreezeAll;
-
-                    if (isPlayer)
-                    {
-                        playerStats.SetGameStatus(GameStatus.GameOver);
-                    }
-                })
+                .Subscribe(_ => OnMeetDeathInTheFace())
                 .AddTo(disposablesBasic);
+        }
+
+        private void OnMeetDeathInTheFace()
+        {
+            if (playerStats.IsPlayerInvincible().Value)
+            {
+                signalDetector.CachedTarget.SetActive(false);
+            }
+            else
+            {
+                animHolder.Die();
+                compRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
+                if (isPlayer)
+                {
+                    playerStatsSetter.SetGameStatus(GameStatus.GameOver);
+                }
+            }
         }
 
         #endregion

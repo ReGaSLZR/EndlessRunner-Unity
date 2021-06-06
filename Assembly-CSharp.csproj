@@ -56,24 +56,66 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Project\Scripts\Movement\MoveConstantAuto.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomDestructivePowerRefillSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Detector\CollisionDetector.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\UITextsController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\UIGroupsController.cs" />
+    <Compile Include="Assets\Project\Scripts\Utils\PhysicsUtil.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\BaseMovement.cs" />
-    <Compile Include="Assets\Project\Scripts\Movement\MoveJumpAuto.cs" />
-    <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
-    <Compile Include="Assets\Project\Scripts\Utils\LogUtil.cs" />
-    <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
-    <Compile Include="Assets\Project\Scripts\Holder\AnimationsHolder.cs" />
-    <Compile Include="Assets\Project\Scripts\Utils\StringUtil.cs" />
     <Compile Include="Assets\Project\Scripts\Model\GameStatus.cs" />
-    <Compile Include="Assets\Project\Scripts\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\KeySettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\MouseClickBased\ClickBreakSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveGravityMultiplier.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\MouseClickBased\ClickSpawnSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\SkillSettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Utils\LogUtil.cs" />
+    <Compile Include="Assets\Project\Scripts\Utils\StringUtil.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomSkillChooser.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\PlayerSettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\BaseRandomExecSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\GameSettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Holder\AnimationsHolder.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveConstantAuto.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\SpawnableModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveJumpAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Detector\ClickDetector.cs" />
-    <Compile Include="Assets\Project\Scripts\Skill\BreakSkill.cs" />
-    <Compile Include="Assets\Project\Scripts\Skill\BaseSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Model\MouseButtonOption.cs" />
-    <Compile Include="Assets\Project\Scripts\Skill\SpawnSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\GeneralSettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\GameplayController.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\BaseSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomInvincibilitySkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\CollisionBased\CollisionPushOffSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomSuperJumpSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Holder\SpawnablePool.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\RandomTerrainController.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Project\Scripts\Shader\HoloShield.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Project\Scripts\Shader\Shield.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -296,17 +338,17 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
@@ -716,6 +758,12 @@
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
@@ -743,41 +791,35 @@
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniRx.csproj">
-      <Project>{9D74E2AD-0612-9E42-32C5-DFD9F4BC076A}</Project>
-      <Name>UniRx</Name>
+    <ProjectReference Include="NaughtyAttributes.Test.csproj">
+      <Project>{A747B449-A9A0-409A-CFD8-8EAE6D960A1D}</Project>
+      <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{F858BCF5-1D62-230E-399B-7A06DB8E0187}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Zenject.csproj">
-      <Project>{E28ACA35-8054-F167-E9DC-6E784C319CFA}</Project>
-      <Name>Zenject</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{904BBAB8-25C9-5D1A-3BB1-3E61AB00D485}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{0A50879F-2399-62A8-43B8-279AA4E54DEC}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{9D74E2AD-0612-9E42-32C5-DFD9F4BC076A}</Project>
+      <Name>UniRx</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{88E51C8C-136F-7033-44E0-B7EE070E14C5}</Project>
       <Name>NaughtyAttributes.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{A747B449-A9A0-409A-CFD8-8EAE6D960A1D}</Project>
-      <Name>NaughtyAttributes.Test</Name>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{0A50879F-2399-62A8-43B8-279AA4E54DEC}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{E28ACA35-8054-F167-E9DC-6E784C319CFA}</Project>
+      <Name>Zenject</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
       <Project>{CEDD762D-7EB7-F28C-BFDE-9F477FD09A29}</Project>

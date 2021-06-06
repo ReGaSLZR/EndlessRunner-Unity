@@ -56,49 +56,49 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\Utility\EColor.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\InputAxisAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\BoxGroupAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\FoldoutAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\InfoBoxAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\DropdownAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\RequiredAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\EnableIfAttributeBase.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\IGroupAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\ProgressBarAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\DrawerAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ShowIfAttributeBase.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\Utility\EColor.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\FoldoutAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\MaxValueAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\LayerAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\Utility\EConditionOperator.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\AllowNestingAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\TagAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\ValidatorAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\EnableIfAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\HideIfAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\Expandable.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\MetaAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\SceneAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\LabelAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\INaughtyAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\OnValueChangedAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\ProgressBarAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\LayerAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\LabelAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\INaughtyAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\BoxGroupAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\DisableIfAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\InfoBoxAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\Utility\EConditionOperator.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\EnableIfAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\Expandable.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\MetaAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\InputAxisAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\ShowIfAttributeBase.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\RequiredAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\SceneAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\EnableIfAttributeBase.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\ValidatorAttributes\ValidatorAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\DrawerAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\DrawerAttributes\TagAttribute.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\MetaAttributes\HideIfAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Core\NaughtyAttributes.Core.asmdef" />
@@ -333,17 +333,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>

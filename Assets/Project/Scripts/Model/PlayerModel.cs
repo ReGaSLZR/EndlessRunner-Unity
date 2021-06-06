@@ -1,7 +1,6 @@
 namespace ReGaSLZR.EndlessRunner.Model
 {
 
-    using NaughtyAttributes;
     using UniRx;
     using Zenject;
 
@@ -10,14 +9,21 @@ namespace ReGaSLZR.EndlessRunner.Model
     public interface PlayerStatsGetter
     {
         public IReadOnlyReactiveProperty<GameStatus> GetGameStatus();
+        public IReadOnlyReactiveProperty<bool> IsPlayerInvincible();
         public IReadOnlyReactiveProperty<int> GetPlayerTime();
         public IReadOnlyReactiveProperty<int> GetPlayerScore();
+        public IReadOnlyReactiveProperty<int> GetDestructionPowerUseCount();
     }
 
     public interface PlayerStatsSetter
     {
         public void SetGameStatus(GameStatus status);
         public void AddScore(int additionalScore);
+
+        public void SetInvincibility(bool isInvincible);
+        public void AddDestructionPowerUse(); 
+        public void DecreaseDestructionPowerUse();
+        public void SetDestructionPowerUseCount(int count);
     }
 
     #endregion
@@ -31,11 +37,23 @@ namespace ReGaSLZR.EndlessRunner.Model
         private ReactiveProperty<GameStatus> gameStatus
             = new ReactiveProperty<GameStatus>(GameStatus.InPlay);
 
+        private ReactiveProperty<bool> isInvincible
+            = new ReactiveProperty<bool>(false);
+
         private ReactiveProperty<int> time
             = new ReactiveProperty<int>(0);
 
         private ReactiveProperty<int> score
             = new ReactiveProperty<int>(0);
+
+        private ReactiveProperty<int> destructivePowerUseCount
+            = new ReactiveProperty<int>(0);
+
+        private CompositeDisposable disposables
+            = new CompositeDisposable();
+
+        private readonly System.TimeSpan ONE_SECOND
+            = System.TimeSpan.FromSeconds(1);
 
         #endregion
 
@@ -47,21 +65,18 @@ namespace ReGaSLZR.EndlessRunner.Model
             Container.Bind<PlayerStatsSetter>().FromInstance(this);
         }
 
-        #endregion
+        private void OnEnable()
+        {
+            Observable.Interval(ONE_SECOND)
+                .Where(_ => GetGameStatus().Value == GameStatus.InPlay)
+                .Subscribe(_ => time.Value += 1)
+                .AddTo(disposables);
+        }
 
-        #region Class Implementation
-
-        //[Button]
-        //private void StartGame()
-        //{
-        //    SetGameStatus(GameStatus.InPlay);
-        //}
-
-        //[Button]
-        //private void EndGame()
-        //{
-        //    SetGameStatus(GameStatus.GameOver);
-        //}
+        private void OnDisable()
+        {
+            disposables.Clear();
+        }
 
         #endregion
 
@@ -82,6 +97,17 @@ namespace ReGaSLZR.EndlessRunner.Model
             return time;
         }
 
+        public IReadOnlyReactiveProperty<bool> IsPlayerInvincible()
+        {
+            return isInvincible;
+        }
+
+        public IReadOnlyReactiveProperty<int> GetDestructionPowerUseCount()
+        {
+            return destructivePowerUseCount;
+        }
+
+
         #endregion
 
         #region Setter Interface Implementation
@@ -99,6 +125,31 @@ namespace ReGaSLZR.EndlessRunner.Model
         public void SetGameStatus(GameStatus status)
         {
             gameStatus.Value = status;
+        }
+
+        public void SetInvincibility(bool isInvincible)
+        {
+            this.isInvincible.Value = isInvincible;
+        }
+
+        public void AddDestructionPowerUse()
+        {
+            destructivePowerUseCount.Value += 1;
+        }
+
+        public void DecreaseDestructionPowerUse()
+        {
+            if (destructivePowerUseCount.Value <= 0)
+            {
+                return;
+            }
+
+            destructivePowerUseCount.Value -= 1;
+        }
+
+        public void SetDestructionPowerUseCount(int count)
+        {
+            destructivePowerUseCount.Value = count;
         }
 
         #endregion

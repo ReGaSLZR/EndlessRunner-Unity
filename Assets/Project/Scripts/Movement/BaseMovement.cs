@@ -3,6 +3,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
     using Base;
     using Model;
+    using Model.Settings;
     using Detector;
 
     using NaughtyAttributes;
@@ -14,7 +15,10 @@ namespace ReGaSLZR.EndlessRunner.Movement
     {
 
         [Inject]
-        private PlayerStatsGetter playerStats;
+        protected PlayerStatsGetter playerStats;
+
+        [Inject]
+        protected PlayerSettings playerSettings;
 
         #region Inspector Variables
 
@@ -28,7 +32,6 @@ namespace ReGaSLZR.EndlessRunner.Movement
         protected Rigidbody compRigidbody;
 
         [SerializeField]
-        [Required]
         protected CollisionDetector signalDetector;
 
         #endregion

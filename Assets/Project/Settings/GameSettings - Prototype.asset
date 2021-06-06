@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae86c2a2278bfb6469ce26312ff78bbf, type: 3}
+  m_Name: GameSettings - Prototype
+  m_EditorClassIdentifier: 
+  generalSettings:
+    preGamePlayCountdown: 3
+  playerSettings:
+    constantAccel: 3
+    normalJumpForce: 12
+    normalJumpForceMode: 1
+    gravityMultiplierJumpUp: 1
+    gravityMultiplierFallDown: 1.3
+  skillSettings:
+    destructivePowerUseMaxCount: 5
+    destructivePowerRefillCooldown: 5
+    superJumpForce: 23
+    superJumpForceMode: 1
+    bonusSkillEffectDelayMin: 15
+    bonusSkillEffectDelayMax: 30
+    bonusSkillEffectDurationMin: 2
+    bonusSkillEffectDurationMax: 3
+  keySettings:
+    mouseButtonBreak: 1
+    mouseButtonSpawn: 0
+    keysSpawnableSelect: 6a0000006b0000006c0000003b000000

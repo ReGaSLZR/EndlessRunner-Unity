@@ -57,39 +57,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\_NaughtyScriptableObject.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\InputAxisTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\OnValueChangedTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowAssetPreviewTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\_NaughtyComponent.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\InfoBoxTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowNonSerializedFieldTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\EnumFlagsTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ExpandableTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\EnableIfTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowIfTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\SceneTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowNativePropertyTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\_TestScriptableObject.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\AnimatorParamTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\MinMaxValueTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\HorizontalLineTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\LabelTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\LayerTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ReadOnlyTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\MinMaxSliderTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\BoxGroupTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ButtonTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ResizableTextAreaTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\TagTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\HideIfTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ProgressBarTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\CurveRangeTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\RequiredTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\OnValueChangedTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\_TestScriptableObject.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\MinMaxValueTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\BoxGroupTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ValidateInputTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\RequiredTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowAssetPreviewTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\EnumFlagsTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\HorizontalLineTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\InfoBoxTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ExpandableTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ButtonTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\DisableIfTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\_NaughtyComponent.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\TagTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\DropdownTest.cs" />
-    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\FoldoutTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowNativePropertyTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ReadOnlyTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\AnimatorParamTest.cs" />
     <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ReorderableListTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowNonSerializedFieldTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\EnableIfTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\LayerTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ShowIfTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\LabelTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\ProgressBarTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\InputAxisTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\CurveRangeTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\SceneTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\HideIfTest.cs" />
+    <Compile Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\FoldoutTest.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Plugins\NaughtyAttributes-2.1.0\Scripts\Test\NaughtyAttributes.Test.asmdef" />
@@ -324,17 +324,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>

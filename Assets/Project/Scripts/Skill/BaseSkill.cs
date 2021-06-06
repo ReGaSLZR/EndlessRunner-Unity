@@ -4,14 +4,13 @@ namespace ReGaSLZR.EndlessRunner.Skill
     using Base;
     using Model;
 
-    using UnityEngine;
     using UniRx;
     using Zenject;
 
     public abstract class BaseSkill : ReactiveMonoBehaviour
     {
         [Inject]
-        private PlayerStatsGetter playerStat;
+        protected PlayerStatsGetter playerStat;
 
         protected virtual void Start()
         {
@@ -19,7 +18,6 @@ namespace ReGaSLZR.EndlessRunner.Skill
                 .Subscribe(status => enabled = 
                     (status == GameStatus.InPlay))
                 .AddTo(disposablesTerminal);
-        
         }
 
     }

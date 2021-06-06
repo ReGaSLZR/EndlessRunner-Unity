@@ -7,6 +7,7 @@ namespace ReGaSLZR.EndlessRunner.Model
         InPlay,
         Paused,
         GameOver,
+        Loading,
     }
 
 }
