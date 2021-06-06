@@ -4,7 +4,8 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
     using UnityEngine;
     using Zenject;
 
-    [CreateAssetMenu(fileName = "GameSettings", menuName = "Installers/GameSettings")]
+    [CreateAssetMenu(fileName = "GameSettings", 
+        menuName = "Installers/GameSettings")]
     public class GameSettings : ScriptableObjectInstaller<GameSettings>
     {
 

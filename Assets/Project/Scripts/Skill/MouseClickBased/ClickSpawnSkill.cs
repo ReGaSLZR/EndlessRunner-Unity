@@ -17,6 +17,9 @@ namespace ReGaSLZR.EndlessRunner.Skill.Click
         private SpawnableGetter spawnableModel;
 
         [Inject]
+        private FXModel fxModel;
+
+        [Inject]
         private KeySettings keySettings;
 
         [SerializeField]
@@ -34,6 +37,9 @@ namespace ReGaSLZR.EndlessRunner.Skill.Click
                     {
                         obj.SetActive(true);
                         obj.transform.position = worldPos;
+
+                        fxModel.FXSpawn.transform.position = worldPos;
+                        fxModel.FXSpawn.SetActive(true);
                     }
                 })
                 .AddTo(disposablesBasic);
