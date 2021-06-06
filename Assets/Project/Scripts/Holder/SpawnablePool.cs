@@ -62,6 +62,8 @@ namespace ReGaSLZR.EndlessRunner.Holder
 
         protected override void RegisterObservables()
         {
+            base.RegisterObservables();
+
             this.UpdateAsObservable()
                 .Where(_ => playerStat.GetGameStatus().Value
                     == GameStatus.InPlay)
