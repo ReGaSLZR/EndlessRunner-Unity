@@ -61,7 +61,9 @@
     <Compile Include="Assets\Project\Scripts\Controller\UITextsController.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\RandomTerrainController.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\UIGroupsController.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\PhysicsUtil.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\BaseMovement.cs" />
     <Compile Include="Assets\Project\Scripts\Model\GameStatus.cs" />
     <Compile Include="Assets\Project\Scripts\_Base\ReactiveMonoBehaviour.cs" />
@@ -72,41 +74,39 @@
     <Compile Include="Assets\Project\Scripts\Skill\MouseClickBased\ClickSpawnSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\SkillSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\LogUtil.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Project\Scripts\Utils\StringUtil.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomSkillChooser.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\PlayerSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\BaseRandomExecSkill.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\GameSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Holder\AnimationsHolder.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveConstantAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Model\SpawnableModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\GameplayController.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveJumpAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Detector\ClickDetector.cs" />
     <Compile Include="Assets\Project\Scripts\Model\MouseButtonOption.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\GeneralSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PreGameplaySequenceController.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Project\Scripts\Model\GameplayModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Skill\CollisionBased\CollisionPickItemSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\BaseSkill.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\Settings\TerrainSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\Project\Scripts\Holder\ObjectPool.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\FXModel.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomInvincibilitySkill.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\CollisionBased\CollisionPushOffSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomSuperJumpSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Holder\SpawnablePool.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\GameplayController.cs" />
-    <Compile Include="Assets\Project\Scripts\Holder\ObjectPool.cs" />
-    <Compile Include="Assets\Project\Scripts\Skill\CollisionBased\CollisionPickItemSkill.cs" />
-    <Compile Include="Assets\Project\Scripts\Model\Settings\TerrainSettings.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\Project\Scripts\Model\FXModel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -374,6 +374,12 @@
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -753,9 +759,6 @@
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
@@ -774,11 +777,14 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
@@ -819,6 +825,10 @@
       <Project>{A747B449-A9A0-409A-CFD8-8EAE6D960A1D}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{1DD99A0B-6CC0-E04B-63B3-EC87E1B97198}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{F858BCF5-1D62-230E-399B-7A06DB8E0187}</Project>
       <Name>Zenject-Editor</Name>
@@ -827,9 +837,17 @@
       <Project>{904BBAB8-25C9-5D1A-3BB1-3E61AB00D485}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{8C3B7B17-7144-30FB-1D88-CC249BCE947E}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UniRx.csproj">
       <Project>{9D74E2AD-0612-9E42-32C5-DFD9F4BC076A}</Project>
       <Name>UniRx</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{407851A7-644A-7F1E-2487-2E5019BAC535}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{88E51C8C-136F-7033-44E0-B7EE070E14C5}</Project>
@@ -846,18 +864,6 @@
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
       <Project>{CEDD762D-7EB7-F28C-BFDE-9F477FD09A29}</Project>
       <Name>NaughtyAttributes.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{8C3B7B17-7144-30FB-1D88-CC249BCE947E}</Project>
-      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{1DD99A0B-6CC0-E04B-63B3-EC87E1B97198}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{407851A7-644A-7F1E-2487-2E5019BAC535}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

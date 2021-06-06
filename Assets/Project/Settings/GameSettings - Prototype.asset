@@ -35,9 +35,9 @@ MonoBehaviour:
     spawnTimeSpan: 1.2
     delayFirstSpawn: 7
   keySettings:
-    mouseButtonBreak: 1
-    mouseButtonSpawn: 0
-    keysSpawnableSelect: 6a0000006b0000006c0000003b000000
+    mouseButtonBreak: 0
+    mouseButtonSpawn: 1
+    keysSpawnableSelect: 61000000730000006400000066000000
     pauseUnpauseGameplay: 32
     reload: 13
     quit: 27
