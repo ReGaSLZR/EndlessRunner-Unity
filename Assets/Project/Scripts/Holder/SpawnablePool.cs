@@ -1,7 +1,6 @@
 namespace ReGaSLZR.EndlessRunner.Holder
 {
 
-    using Base;
     using Model;
     using Model.Settings;
 
@@ -19,7 +18,7 @@ namespace ReGaSLZR.EndlessRunner.Holder
         public GameObject GetItemFromPool();
     }
 
-    public class SpawnablePool : ReactiveMonoBehaviour, SpawnablePoolGetter
+    public class SpawnablePool : ObjectPool, SpawnablePoolGetter
     {
 
         [Inject]
@@ -48,15 +47,12 @@ namespace ReGaSLZR.EndlessRunner.Holder
         [SerializeField]
         private int hotKeyIndex;
 
-        [SerializeField]
-        private GameObject[] spawnables;
-
-        private int cachedIndex = 0;
-
-        private void Start()
+        protected override void Start()
         {
-            textOnUI.text = spawnableName + " (" + keySettings.GetHotKeySpawnableSelect(hotKeyIndex) + ")";
-            DisableAllSpawnables();
+            base.Start();
+
+            textOnUI.text = spawnableName + " (" + 
+                keySettings.GetHotKeySpawnableSelect(hotKeyIndex) + ")";
 
             if (isDefault)
             {
@@ -76,29 +72,11 @@ namespace ReGaSLZR.EndlessRunner.Holder
                 .AddTo(disposablesBasic);
         }
 
-        private void DisableAllSpawnables()
-        {
-            foreach (var spawnable in spawnables)
-            {
-                spawnable.SetActive(false);
-            }
-        }
-
         public TextMeshProUGUI GetTextOnUI()
         {
             return textOnUI;
         }
 
-        public GameObject GetItemFromPool()
-        {
-            cachedIndex = (cachedIndex == spawnables.Length - 1) 
-                ? 0 : (cachedIndex + 1);
-            var spawnable = spawnables[cachedIndex];
-            spawnable.SetActive(true);
-            return spawnable;
-        }
-
     }
-
 
 }

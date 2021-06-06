@@ -19,6 +19,7 @@ namespace ReGaSLZR.EndlessRunner.Model
     {
         public void SetGameStatus(GameStatus status);
         public void AddScore(int additionalScore);
+        public void AddTime(int additionalTime);
 
         public void SetInvincibility(bool isInvincible);
         public void AddDestructionPowerUse(); 
@@ -120,6 +121,16 @@ namespace ReGaSLZR.EndlessRunner.Model
             }
 
             score.Value += additionalScore;
+        }
+
+        public void AddTime(int additionalTime)
+        {
+            if (additionalTime < 0)
+            {
+                return;
+            }
+
+            time.Value += additionalTime;
         }
 
         public void SetGameStatus(GameStatus status)

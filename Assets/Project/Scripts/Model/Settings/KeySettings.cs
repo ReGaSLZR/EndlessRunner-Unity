@@ -6,6 +6,10 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
     public class KeySettings
     {
 
+        #region Variables
+
+        [Header("Primary Mouse-based Skill Buttons")]
+
         [SerializeField]
         private MouseButtonOption mouseButtonBreak;
         public MouseButtonOption MouseButtonBreak
@@ -16,12 +20,19 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
         public MouseButtonOption MouseButtonSpawn
         { get { return mouseButtonSpawn; } }
 
-        [Header("Spawnable Selection Keys")]
+        [Header("Selection Keys for Spawnable Platforms")]
 
         [SerializeField]
         private KeyCode[] keysSpawnableSelect;
         public KeyCode[] KeysSpawnableSelect
         { get { return keysSpawnableSelect; } }
+
+        [SerializeField]
+        private KeyCode pauseUnpauseGameplay;
+        public KeyCode PauseUnpause
+        { get { return pauseUnpauseGameplay; } }
+
+        #endregion
 
         public KeyCode GetHotKeySpawnableSelect(int index)
         {

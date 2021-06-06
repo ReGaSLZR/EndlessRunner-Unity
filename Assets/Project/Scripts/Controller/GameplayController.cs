@@ -3,12 +3,17 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using Base;
     using Model;
     using Model.Settings;
-
+    
+    using UnityEngine;
     using UniRx;
+    using UniRx.Triggers;
     using Zenject;
 
     public class GameplayController : ReactiveMonoBehaviour
     {
+
+        [Inject]
+        private KeySettings keySettings;
 
         [Inject]
         private PlayerStatsGetter playerStatsGetter;
@@ -16,35 +21,25 @@ namespace ReGaSLZR.EndlessRunner.Controller
         [Inject]
         private PlayerStatsSetter playerStatsSetter;
 
-        [Inject]
-        private SkillSettings skillSettings;
-
-        private int refillTime;
-
         protected override void RegisterObservables()
         {
-            Observable.Interval(System.TimeSpan.FromSeconds(1))
-                .Where(_ => playerStatsGetter.GetGameStatus().Value
-                    == GameStatus.InPlay)
-                .Where(_ => playerStatsGetter
-                    .GetDestructionPowerUseCount().Value < skillSettings.DestructivePowerUseMaxCount)
-                .Where(_ => refillTime < 
-                    playerStatsGetter.GetPlayerTime().Value)
-                .Subscribe(_ => refillTime = skillSettings.DestructivePowerRefillCooldown + playerStatsGetter.GetPlayerTime().Value)
-                .AddTo(disposablesBasic);
-
-            playerStatsGetter.GetPlayerTime()
-                .Where(time => time == refillTime)
-                .Where(_ => playerStatsGetter.GetDestructionPowerUseCount().Value < skillSettings.DestructivePowerUseMaxCount)
-                .Subscribe(_ => 
-                    playerStatsSetter.AddDestructionPowerUse())
+            this.UpdateAsObservable()
+                .Where(_ => Input.GetKeyDown(keySettings.PauseUnpause))
+                .Select(_ => playerStatsGetter.GetGameStatus().Value)
+                .Where(status => (status == GameStatus.InPlay) ||
+                        (status == GameStatus.Paused))
+                .Subscribe(status => PauseUnpauseGame(status))
                 .AddTo(disposablesBasic);
         }
 
-        private void Start()
+        private void PauseUnpauseGame(GameStatus status)
         {
-            playerStatsSetter.SetDestructionPowerUseCount(skillSettings.DestructivePowerUseMaxCount);
+            playerStatsSetter.SetGameStatus(
+                        (status == GameStatus.InPlay)
+                        ? GameStatus.Paused : GameStatus.InPlay);
+            Time.timeScale = (status == GameStatus.InPlay) ? 0 : 1;
         }
+
     }
 
 }

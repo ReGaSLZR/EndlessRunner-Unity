@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameSettings - Prototype
   m_EditorClassIdentifier: 
   generalSettings:
-    preGamePlayCountdown: 3
+    firstBreakSkillRefillCountdown: 3
   playerSettings:
     constantAccel: 3
     normalJumpForce: 12
@@ -29,7 +29,13 @@ MonoBehaviour:
     bonusSkillEffectDelayMax: 30
     bonusSkillEffectDurationMin: 2
     bonusSkillEffectDurationMax: 3
+  terrainSettings:
+    startingPositionX: 22
+    distanceElementsX: 7
+    spawnTimeSpan: 1.2
+    delayFirstSpawn: 7
   keySettings:
     mouseButtonBreak: 1
     mouseButtonSpawn: 0
     keysSpawnableSelect: 6a0000006b0000006c0000003b000000
+    pauseUnpauseGameplay: 32

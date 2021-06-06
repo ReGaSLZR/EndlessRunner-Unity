@@ -3,6 +3,7 @@ namespace ReGaSLZR.EndlessRunner.Movement
 
     using Model;
     using Holder;
+    using Utils;
 
     using NaughtyAttributes;
     using UnityEngine;
@@ -23,7 +24,10 @@ namespace ReGaSLZR.EndlessRunner.Movement
         #region Inspector Variables
 
         [SerializeField]
-        [Required]
+        [Layer]
+        private int invincibilityExceptionLayer;
+
+        [SerializeField]
         private AnimationsHolder animHolder;
 
         [SerializeField]
@@ -36,26 +40,44 @@ namespace ReGaSLZR.EndlessRunner.Movement
         protected override void RegisterObservables()
         {
             this.FixedUpdateAsObservable()
+              .Where(_ => playerStats.GetGameStatus().Value
+                         == GameStatus.InPlay)
               .Subscribe(_ => compRigidbody.position +=
                   (moveDirection * playerSettings.ConstantAccel *
                   Time.fixedDeltaTime))
               .AddTo(disposablesBasic);
 
-            signalDetector.IsTriggered
-                .Where(isDead => isDead)
-                .Subscribe(_ => OnMeetDeathInTheFace())
-                .AddTo(disposablesBasic);
+            if (signalDetector != null)
+            {
+                signalDetector.IsTriggered
+                    .Where(isDead => isDead)
+                    .Subscribe(_ => OnMeetDeathInTheFace())
+                    .AddTo(disposablesBasic);
+            }
         }
 
         private void OnMeetDeathInTheFace()
         {
             if (playerStats.IsPlayerInvincible().Value)
             {
-                signalDetector.CachedTarget.SetActive(false);
+                if (signalDetector.CachedTarget.layer !=
+                    invincibilityExceptionLayer)
+                {
+                    signalDetector.CachedTarget.SetActive(false);
+                }
+                else 
+                {
+                    LogUtil.PrintInfo(gameObject, GetType(),
+                        "Player is Invincible but hit exception layer. Not disabling collided object.");
+                }
             }
             else
             {
-                animHolder.Die();
+                if (animHolder != null)
+                {
+                    animHolder.Die();
+                }
+                
                 compRigidbody.constraints = RigidbodyConstraints.FreezeAll;
 
                 if (isPlayer)

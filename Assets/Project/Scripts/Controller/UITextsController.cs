@@ -3,6 +3,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
     using Base;
     using Model;
+    using Model.Settings;
     using Skill.Random;
 
     using NaughtyAttributes;
@@ -16,6 +17,9 @@ namespace ReGaSLZR.EndlessRunner.Controller
         [Inject]
         private PlayerStatsGetter playerStats;
 
+        [Inject]
+        private KeySettings keySettings;
+
         [Header("UI Elements")]
 
         [SerializeField]
@@ -28,7 +32,12 @@ namespace ReGaSLZR.EndlessRunner.Controller
         private TextMeshProUGUI[] textDestructivePowerUseCounts;
 
         [SerializeField]
+        [Required]
         private TextMeshProUGUI textRandomSkillName;
+
+        [SerializeField]
+        [Required]
+        private TextMeshProUGUI textUnpause;
 
         [Header("Components")]
 
@@ -47,13 +56,17 @@ namespace ReGaSLZR.EndlessRunner.Controller
                 .AddTo(disposablesBasic);
 
             playerStats.GetDestructionPowerUseCount()
-                .Subscribe(useCount => SetTextOnUI(textDestructivePowerUseCounts, useCount.ToString()))
+                .Subscribe(useCount => SetTextOnUI(
+                    textDestructivePowerUseCounts, useCount.ToString()))
                 .AddTo(disposablesBasic);
         }
 
         private void Start()
         {
-            textRandomSkillName.text = randomSkillChooser.GetRandomSkillName();
+            textRandomSkillName.text = 
+                randomSkillChooser.GetRandomSkillName();
+            textUnpause.text = "Unpause (" + 
+                keySettings.PauseUnpause.ToString() + ")";
         }
 
         private void SetTextOnUI(TextMeshProUGUI[] texts, string content)

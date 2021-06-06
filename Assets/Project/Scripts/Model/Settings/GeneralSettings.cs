@@ -8,9 +8,9 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
     {
 
         [SerializeField]
-        private int preGamePlayCountdown = 3;
-        public int PreGamePlayCountdown 
-            { get { return preGamePlayCountdown; } }
+        private int firstBreakSkillRefillCountdown = 3;
+        public int FirstBreakSkillRefillCountdown 
+            { get { return firstBreakSkillRefillCountdown; } }
 
     }
 

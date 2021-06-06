@@ -18,13 +18,17 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
         private SkillSettings skillSettings;
 
         [SerializeField]
+        private TerrainSettings terrainSettings;
+
+        [SerializeField]
         private KeySettings keySettings;
 
         public override void InstallBindings()
         {
             Container.BindInstances(
                 generalSettings, playerSettings, 
-                skillSettings, keySettings);
+                skillSettings, keySettings, 
+                terrainSettings);
         }
 
     }

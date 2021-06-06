@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6109566228589364487}
   - component: {fileID: 6109566228589364484}
   - component: {fileID: 6109566228589364485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform STARTER (TEST)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6109566228589364486
 Transform:
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6109566228589364490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 1.5}
+  m_LocalScale: {x: 25, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

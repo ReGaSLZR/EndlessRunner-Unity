@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &197113957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197113960}
+  - component: {fileID: 197113959}
+  - component: {fileID: 197113958}
+  m_Layer: 0
+  m_Name: Item Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &197113960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197113957}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6741227249375879060}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &197113959
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197113957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &197113958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197113957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59446c59520587846a5869c664c2b1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagTargets:
+  - ItemScore
 --- !u!1 &300090635
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,16 +308,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Super Jump
-  delayExecuteMin: 15
-  delayExecuteMax: 30
   hasDuration: 0
-  durationMin: 1
-  durationMax: 2
   isChosen: 0
   fxHolder: {fileID: 726001841}
   compRigidbody: {fileID: 1207254168854874478}
-  jumpForce: 20
-  forceMode: 1
+--- !u!1 &818113031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818113032}
+  - component: {fileID: 818113034}
+  - component: {fileID: 818113033}
+  m_Layer: 0
+  m_Name: Item Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &818113032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818113031}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6741227249375879060}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &818113034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818113031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &818113033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818113031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59446c59520587846a5869c664c2b1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagTargets:
+  - ItemTime
 --- !u!1 &993138271
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +401,68 @@ Transform:
   m_Father: {fileID: 1207254168854874474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &997839852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997839853}
+  - component: {fileID: 997839854}
+  - component: {fileID: 997839855}
+  m_Layer: 0
+  m_Name: Item Collection Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &997839853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997839852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1207254168854874474}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &997839854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997839852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8916eb5b25d3fc34da46fa75a41044b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalDetector: {fileID: 197113958}
+  itemBoon: 1
+  boonValue: 1
+--- !u!114 &997839855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997839852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8916eb5b25d3fc34da46fa75a41044b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalDetector: {fileID: 818113033}
+  itemBoon: 0
+  boonValue: 10
 --- !u!1 &1094498269
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e36773f9a16d864688f0aba5f2bdc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseButton: 0
   layersTarget: 0600000007000000
 --- !u!114 &1094498272
 MonoBehaviour:
@@ -347,7 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5189d1855236d4394679bd471571de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseButton: 1
   zPosition: 0
 --- !u!1 &1425577582
 GameObject:
@@ -503,8 +675,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922664441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.67, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0.92, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 6741227249375879060}
   m_RootOrder: 0
@@ -640,11 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Destructive Power Refill
-  delayExecuteMin: 15
-  delayExecuteMax: 30
   hasDuration: 0
-  durationMin: 1
-  durationMax: 2
   isChosen: 0
   fxHolder: {fileID: 726001841}
 --- !u!1 &1207254168854874465
@@ -686,6 +854,7 @@ Transform:
   - {fileID: 3915703074105296665}
   - {fileID: 1094498270}
   - {fileID: 1643465684}
+  - {fileID: 997839853}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -845,11 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Invincibility
-  delayExecuteMin: 15
-  delayExecuteMax: 30
   hasDuration: 1
-  durationMin: 2
-  durationMax: 5
   isChosen: 0
   fxHolder: {fileID: 703977207}
 --- !u!1 &3196154787205378673
@@ -1010,6 +1175,8 @@ Transform:
   - {fileID: 1922664444}
   - {fileID: 300090636}
   - {fileID: 2080310061}
+  - {fileID: 197113960}
+  - {fileID: 818113032}
   m_Father: {fileID: 1207254168854874474}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1062,6 +1229,7 @@ MonoBehaviour:
   isPlayer: 1
   compRigidbody: {fileID: 1207254168854874478}
   signalDetector: {fileID: 2080310062}
+  invincibilityExceptionLayer: 8
   animHolder: {fileID: 5714448534609041426}
   moveDirection: {x: 1, y: 0, z: 0}
 --- !u!114 &2260783824210646875

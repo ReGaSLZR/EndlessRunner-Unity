@@ -105,6 +105,11 @@
                 });
         }
 
+        public void ForceResetIsTriggered()
+        {
+            isTriggered.Value = false;
+            cachedTarget = null;
+        }
 
     }
 

@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Enemy
   - Exit
+  - ItemScore
+  - ItemTime
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - Breakable
   - Spawnable
-  - 
+  - Boundary
   - 
   - 
   - 
