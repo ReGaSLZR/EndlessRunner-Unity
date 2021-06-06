@@ -5,6 +5,11 @@ namespace ReGaSLZR.EndlessRunner.Model
     using UnityEngine;
     using Zenject;
 
+    /// <summary>
+    /// Holds the reference to globally needed FXs.
+    /// Good for repositioning elements regardless of 
+    /// parent/caller object's own position.
+    /// </summary>
     [System.Serializable]
     public class FXModel : MonoInstaller
     {
@@ -20,6 +25,12 @@ namespace ReGaSLZR.EndlessRunner.Model
         private GameObject fxDestroy;
         public GameObject FXDestroy
         { get { return fxDestroy; } }
+
+        [SerializeField]
+        [Required]
+        private GameObject fxDeath;
+        public GameObject FXDeath
+        { get { return fxDeath; } }
 
         public override void InstallBindings()
         {

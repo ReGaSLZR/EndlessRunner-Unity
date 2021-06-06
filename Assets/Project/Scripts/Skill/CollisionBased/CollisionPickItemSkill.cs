@@ -27,6 +27,10 @@ namespace ReGaSLZR.EndlessRunner.Skill.Collision
         private CollisionDetector signalDetector;
 
         [SerializeField]
+        [Required]
+        private GameObject fx;
+
+        [SerializeField]
         private ItemBoon itemBoon;
 
         [SerializeField]
@@ -51,12 +55,18 @@ namespace ReGaSLZR.EndlessRunner.Skill.Collision
                             }
                     }
 
+                    fx.SetActive(true);
                     signalDetector.CachedTarget.SetActive(false);
                     signalDetector.ForceResetIsTriggered();
                 })
                 .AddTo(disposablesBasic);
         }
-    }
 
+        private void Start()
+        {
+            fx.SetActive(false);
+        }
+
+    }
 
 }

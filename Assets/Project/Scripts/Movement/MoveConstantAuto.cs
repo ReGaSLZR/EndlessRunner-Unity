@@ -21,6 +21,9 @@ namespace ReGaSLZR.EndlessRunner.Movement
         [Inject]
         private PlayerStatsSetter playerStatsSetter;
 
+        [Inject]
+        private FXModel fxModel;
+
         #region Inspector Variables
 
         [SerializeField]
@@ -68,7 +71,8 @@ namespace ReGaSLZR.EndlessRunner.Movement
                 else 
                 {
                     LogUtil.PrintInfo(gameObject, GetType(),
-                        "Player is Invincible but hit exception layer. Not disabling collided object.");
+                        "Player is Invincible but hit exception " +
+                        "layer. Not disabling collided object.");
                 }
             }
             else
@@ -77,7 +81,10 @@ namespace ReGaSLZR.EndlessRunner.Movement
                 {
                     animHolder.Die();
                 }
-                
+
+                fxModel.FXDeath.transform.position 
+                    = compRigidbody.transform.position;
+                fxModel.FXDeath.SetActive(true);
                 compRigidbody.constraints = RigidbodyConstraints.FreezeAll;
 
                 if (isPlayer)
