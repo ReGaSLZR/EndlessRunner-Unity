@@ -85,7 +85,7 @@
     <Compile Include="Assets\Project\Scripts\Model\MouseButtonOption.cs" />
     <Compile Include="Assets\Project\Scripts\Model\Settings\GeneralSettings.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\GameplaySequenceController.cs" />
-    <Compile Include="Assets\Project\Scripts\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Project\Scripts\Model\GameplayModel.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\BaseSkill.cs" />
     <Compile Include="Assets\Project\Scripts\Movement\MoveSlideAuto.cs" />
     <Compile Include="Assets\Project\Scripts\Skill\RandomlyExecuted\RandomInvincibilitySkill.cs" />

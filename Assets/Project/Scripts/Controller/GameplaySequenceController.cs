@@ -8,6 +8,7 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using System.Collections;
     using TMPro;
     using UnityEngine;
+    using UnityEngine.Playables;
     using UniRx;
     using Zenject;
 
@@ -33,6 +34,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
 
         [SerializeField]
         [Required]
+        private PlayableDirector cutscenePreGameplay;
+
+        [SerializeField]
+        [Required]
         private CanvasGroup groupUIFirstBreakSkillRefill;
 
         [SerializeField]
@@ -44,8 +49,21 @@ namespace ReGaSLZR.EndlessRunner.Controller
             playerStatsGetter.GetGameStatus()
                 .Where(status => status == GameStatus.InPlay)
                 .Where(_ => playerStatsGetter.GetPlayerTime().Value == 0)
-                .Subscribe(_ => StartCoroutine(CorStartCountdownToBreakSkillUsage()))
+                .Subscribe(_ => StartCoroutine(
+                    CorStartCountdownToBreakSkillUsage()))
                 .AddTo(disposablesBasic);
+        }
+
+        private void Start()
+        {
+            StartCoroutine(CorPlayCutscenePreGameplay());
+        }
+
+        private IEnumerator CorPlayCutscenePreGameplay()
+        {
+            cutscenePreGameplay.Play();
+            yield return new WaitForSeconds((float)cutscenePreGameplay.duration);
+            playerStatsSetter.SetGameStatus(GameStatus.InPlay);
         }
 
         private IEnumerator CorStartCountdownToBreakSkillUsage()

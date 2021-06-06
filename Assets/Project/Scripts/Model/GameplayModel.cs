@@ -29,14 +29,14 @@ namespace ReGaSLZR.EndlessRunner.Model
 
     #endregion
 
-    public class PlayerModel : MonoInstaller,
+    public class GameplayModel : MonoInstaller,
         PlayerStatsGetter, PlayerStatsSetter
     {
 
         #region Private Variables
 
         private ReactiveProperty<GameStatus> gameStatus
-            = new ReactiveProperty<GameStatus>(GameStatus.InPlay);
+            = new ReactiveProperty<GameStatus>(GameStatus.NotStarted);
 
         private ReactiveProperty<bool> isInvincible
             = new ReactiveProperty<bool>(false);
