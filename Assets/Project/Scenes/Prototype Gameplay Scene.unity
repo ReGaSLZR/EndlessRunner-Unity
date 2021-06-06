@@ -3017,7 +3017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &106654918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8448,7 +8448,7 @@ GameObject:
   - component: {fileID: 260374595}
   - component: {fileID: 260374596}
   m_Layer: 0
-  m_Name: Spawnable Pool Trampoline
+  m_Name: 3 Spawnable Pool Trampoline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8524,6 +8524,7 @@ MonoBehaviour:
   isDefault: 0
   spawnableName: Trampoline
   textOnUI: {fileID: 1376633111}
+  icon: {fileID: 2800000, guid: 44d5ff889df68ba489e1a45b3273f0eb, type: 3}
   hotKeyIndex: 3
 --- !u!1001 &262642562
 PrefabInstance:
@@ -18100,7 +18101,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 1e-45, y: -0.09853762, z: -0, w: 0.99513334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -18109,7 +18110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -0.57}
+  m_AnchoredPosition: {x: -12.75, y: 1.4300001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519420033
@@ -21575,6 +21576,7 @@ RectTransform:
   - {fileID: 1867155575}
   - {fileID: 1059747384}
   - {fileID: 2005533952}
+  - {fileID: 1097623795}
   m_Father: {fileID: 994110388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26309,7 +26311,7 @@ GameObject:
   - component: {fileID: 717734199}
   - component: {fileID: 717734200}
   m_Layer: 0
-  m_Name: Spawnable Pool Ramp DOWN
+  m_Name: 2 Spawnable Pool Ramp DOWN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26385,6 +26387,7 @@ MonoBehaviour:
   isDefault: 0
   spawnableName: Ramp DOWN
   textOnUI: {fileID: 2128759443}
+  icon: {fileID: 2800000, guid: 54ced18fdb65cfe428367c9aabfb6f18, type: 3}
   hotKeyIndex: 2
 --- !u!1001 &719083943
 PrefabInstance:
@@ -38166,6 +38169,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1097304142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1097623794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097623795}
+  - component: {fileID: 1097623797}
+  - component: {fileID: 1097623796}
+  m_Layer: 5
+  m_Name: RawImage-SpawnableIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1097623795
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097623794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 588359674}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 120, y: 0}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1097623796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097623794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ace2e13229fe82f46bb14d82a9e0b18f, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1097623797
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097623794}
+  m_CullTransparentMesh: 1
 --- !u!1 &1098054041
 GameObject:
   m_ObjectHideFlags: 0
@@ -54213,7 +54288,7 @@ GameObject:
   - component: {fileID: 1572939995}
   - component: {fileID: 1572939996}
   m_Layer: 0
-  m_Name: Spawnable Pool Ramp UP
+  m_Name: 1 Spawnable Pool Ramp UP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54289,6 +54364,7 @@ MonoBehaviour:
   isDefault: 0
   spawnableName: Ramp UP
   textOnUI: {fileID: 2133220477}
+  icon: {fileID: 2800000, guid: a93e8765c007b974aa297781055b4564, type: 3}
   hotKeyIndex: 1
 --- !u!1001 &1573537898
 PrefabInstance:
@@ -65190,6 +65266,7 @@ MonoBehaviour:
   - {fileID: 2133220477}
   - {fileID: 2128759443}
   - {fileID: 1376633111}
+  imageSpawnableIcon: {fileID: 1097623796}
   textAlphaOnActive: 1
   textAlphaOnInactive: 0.3
 --- !u!4 &1880095804
@@ -67162,7 +67239,7 @@ GameObject:
   - component: {fileID: 1944878808}
   - component: {fileID: 1944878809}
   m_Layer: 0
-  m_Name: Spawnable Pool Ramp
+  m_Name: 0 Spawnable Pool Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67238,6 +67315,7 @@ MonoBehaviour:
   isDefault: 1
   spawnableName: Ramp
   textOnUI: {fileID: 143231927}
+  icon: {fileID: 2800000, guid: ace2e13229fe82f46bb14d82a9e0b18f, type: 3}
   hotKeyIndex: 0
 --- !u!1001 &1948250626
 PrefabInstance:

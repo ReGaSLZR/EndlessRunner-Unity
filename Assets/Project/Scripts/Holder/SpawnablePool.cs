@@ -15,6 +15,7 @@ namespace ReGaSLZR.EndlessRunner.Holder
     public interface SpawnablePoolGetter
     {
         public TextMeshProUGUI GetTextOnUI();
+        public Texture GetIcon();
         public GameObject GetItemFromPool();
     }
 
@@ -41,6 +42,10 @@ namespace ReGaSLZR.EndlessRunner.Holder
         [SerializeField]
         [Required]
         private TextMeshProUGUI textOnUI;
+
+        [SerializeField]
+        [Required]
+        private Texture icon;
 
         [Space]
 
@@ -77,6 +82,11 @@ namespace ReGaSLZR.EndlessRunner.Holder
         public TextMeshProUGUI GetTextOnUI()
         {
             return textOnUI;
+        }
+
+        public Texture GetIcon()
+        {
+            return icon;
         }
 
     }

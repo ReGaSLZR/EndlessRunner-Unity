@@ -3,8 +3,10 @@ namespace ReGaSLZR.EndlessRunner.Model
 
     using Holder;
 
+    using NaughtyAttributes;
     using TMPro;
     using UnityEngine;
+    using UnityEngine.UI;
 
     using Zenject;
 
@@ -24,6 +26,12 @@ namespace ReGaSLZR.EndlessRunner.Model
 
         [SerializeField]
         private TextMeshProUGUI[] textsSpawnables;
+
+        [SerializeField]
+        [Required]
+        private RawImage imageSpawnableIcon;
+
+        [Space]
 
         [SerializeField]
         private float textAlphaOnActive = 1f;
@@ -53,6 +61,8 @@ namespace ReGaSLZR.EndlessRunner.Model
         {
             cachedPool = pool;
             DisableAllTexts();
+
+            imageSpawnableIcon.texture = cachedPool.GetIcon();
             cachedPool.GetTextOnUI().CrossFadeAlpha(
                 textAlphaOnActive, 0f, true);
         }
