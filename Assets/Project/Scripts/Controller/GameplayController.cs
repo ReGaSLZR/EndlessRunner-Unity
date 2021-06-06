@@ -3,8 +3,10 @@ namespace ReGaSLZR.EndlessRunner.Controller
     using Base;
     using Model;
     using Model.Settings;
+    using Utils;
     
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using UniRx;
     using UniRx.Triggers;
     using Zenject;
@@ -30,6 +32,24 @@ namespace ReGaSLZR.EndlessRunner.Controller
                         (status == GameStatus.Paused))
                 .Subscribe(status => PauseUnpauseGame(status))
                 .AddTo(disposablesBasic);
+
+            this.UpdateAsObservable()
+              .Where(_ => Input.GetKeyDown(keySettings.Reload))
+              .Subscribe(_ => {
+                  playerStatsSetter.SetGameStatus(GameStatus.Loading);
+                  SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+              })
+              .AddTo(disposablesBasic);
+
+            this.UpdateAsObservable()
+              .Where(_ => Input.GetKeyDown(keySettings.Quit))
+              .Subscribe(_ => {
+                  playerStatsSetter.SetGameStatus(GameStatus.Loading);
+                  LogUtil.PrintInfo(gameObject, GetType(),
+                      "Quitting the game... Thanks for playing. -Ren");
+                  Application.Quit();
+              })
+              .AddTo(disposablesBasic);
         }
 
         private void PauseUnpauseGame(GameStatus status)

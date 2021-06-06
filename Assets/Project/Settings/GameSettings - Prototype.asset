@@ -39,3 +39,5 @@ MonoBehaviour:
     mouseButtonSpawn: 0
     keysSpawnableSelect: 6a0000006b0000006c0000003b000000
     pauseUnpauseGameplay: 32
+    reload: 13
+    quit: 27

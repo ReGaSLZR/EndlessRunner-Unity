@@ -20,7 +20,9 @@ namespace ReGaSLZR.EndlessRunner.Controller
         [Inject]
         private KeySettings keySettings;
 
-        [Header("UI Elements")]
+        #region Inspector Variables
+
+        [Header("UI Texts on HUD")]
 
         [SerializeField]
         private TextMeshProUGUI[] textTimes;
@@ -35,15 +37,24 @@ namespace ReGaSLZR.EndlessRunner.Controller
         [Required]
         private TextMeshProUGUI textRandomSkillName;
 
+        [Header("UI Texts - Gameplay Terminal Controls")]
+
         [SerializeField]
-        [Required]
-        private TextMeshProUGUI textUnpause;
+        private TextMeshProUGUI[] textUnpause;
+
+        [SerializeField]
+        private TextMeshProUGUI[] textReload;
+
+        [SerializeField]
+        private TextMeshProUGUI[] textQuit;
 
         [Header("Components")]
 
         [SerializeField]
         [Required]
         private RandomSkillChooser randomSkillChooser;
+
+        #endregion
 
         protected override void RegisterObservables()
         {
@@ -65,8 +76,13 @@ namespace ReGaSLZR.EndlessRunner.Controller
         {
             textRandomSkillName.text = 
                 randomSkillChooser.GetRandomSkillName();
-            textUnpause.text = "Unpause (" + 
-                keySettings.PauseUnpause.ToString() + ")";
+
+            SetTextOnUI(textUnpause, "Unpause (" +
+                keySettings.PauseUnpause.ToString() + ")");
+            SetTextOnUI(textReload, "Reload (" +
+                keySettings.Reload.ToString() + ")");
+            SetTextOnUI(textQuit, "Quit (" +
+                keySettings.Quit.ToString() + ")"); //TODO make strings static or predefine them somewhere else
         }
 
         private void SetTextOnUI(TextMeshProUGUI[] texts, string content)

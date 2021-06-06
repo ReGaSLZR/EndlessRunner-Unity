@@ -27,10 +27,22 @@ namespace ReGaSLZR.EndlessRunner.Model.Settings
         public KeyCode[] KeysSpawnableSelect
         { get { return keysSpawnableSelect; } }
 
+        [Header("Game Terminal Keys")]
+
         [SerializeField]
         private KeyCode pauseUnpauseGameplay;
         public KeyCode PauseUnpause
         { get { return pauseUnpauseGameplay; } }
+
+        [SerializeField]
+        private KeyCode reload;
+        public KeyCode Reload
+        { get { return reload; } }
+
+        [SerializeField]
+        private KeyCode quit;
+        public KeyCode Quit
+        { get { return quit; } }
 
         #endregion
 
